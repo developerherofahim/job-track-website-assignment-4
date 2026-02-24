@@ -115,28 +115,7 @@ mainContainer.addEventListener('click', function(event){
         renderReject();
         calculateCount();
    }
-else if(event.target.closest('.delete-btn')){
-    
-    const card = event.target.closest('.job-card');
 
-    const companyName = card.querySelector('.company-name').innerText;
-
-    // Remove from interview list
-    interviewList = interviewList.filter(item => item.companyName !== companyName);
-
-    // Remove from rejected list
-    rejectedList = rejectedList.filter(item => item.companyName !== companyName);
-
-   
-    card.remove();
-
-    
-    renderInterview();
-    renderReject();
-
-    
-    calculateCount();
-}
    
 })
 
