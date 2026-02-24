@@ -176,38 +176,6 @@ function renderInterview(){
     
 }
 
-function renderReject(){
-    rejectSection.innerHTML = ''
 
-    for(let reject of rejectedList){
-        // console.log(interview);
-        let div = document.createElement('div');
-        div.className = 'job-card p-6 bg-base-100 shadow-sm flex flex-row justify-between items-baseline mx-5 mt-4'
-        div.innerHTML = `
-                        <div class="space-y-5">
-                    <div>
-                        <h2 class=" company-name card-title text-xl font-semibold">${reject.companyName}</h2>
-                        <p class="job-role text-xl text-gray-500">${reject.jobRole}</p>
-                    </div>
-                    <div>
-                        <p class="salary text-gray-500">${reject.salary}</p>
-                        </div>
-                    <div class="space-y-2">
-                        <button class="status-btn btn btn-soft rounded-xs">${reject.status}</button>
-                        <p class="title">${reject.title}</p>
-                    </div>
-                    <div class="justify-baseline card-actions">
-                        <button class="interview-btn btn btn-primary btn-outline btn-success">Interview</button>
-                        <button class="reject-btn btn btn-primary btn-outline btn-error">Rejected</button>
-                    </div>
-                </div>
-                <div class="right">
-                        <button class="btn btn-circle"><span><i class="fa-regular fa-trash-can"></i></span></button>
-                </div>
-        `
-        rejectSection.appendChild(div)
-    }
-    
-}
 
 calculateCount();
